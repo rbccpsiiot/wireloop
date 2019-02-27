@@ -1,3 +1,3 @@
 git add .
-git commit -m "auto $(date)"
+git commit -m "AUTO - $(date)"
 git  push
