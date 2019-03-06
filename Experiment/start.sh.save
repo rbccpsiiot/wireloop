@@ -1,0 +1,34 @@
+if [ -z $1 ]
+then
+echo "Enter username... Usage -> sh $0 username "
+exit
+fi
+
+
+uname=$1
+
+uid=$(ls users | sort | tail -1)
+uid=$(echo "$uid+1" | bc)
+
+if [ -z $uid ]
+then
+uid=1
+fi
+
+echo "----------------"
+echo "Username: $uname"
+echo "UserID: $uid"
+echo "----------------"
+
+read -p "Proceed? N/y" ans
+echo $ans
+
+
+if [ "$ans" = "y" ]
+then
+echo $uname > users/$ui
+
+
+echo "-------------------------------------"
+echo "Created new user $uname in file $uid"
+echo "-------------------------------------"
