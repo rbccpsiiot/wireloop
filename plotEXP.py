@@ -37,7 +37,9 @@ try:
 	eve.timestamp=pd.to_datetime(eve.timestamp)
 except:
 	print()
+avgvoltage=gsr["voltage"].mean()
 ax=gsr.plot(x="timestamp", y="voltage", color='orange')
+ax.set_ylim(avgvoltage-0.2, avgvoltage+0.2)
 #ax=plt.plot(gsr.timestamp, gsr.voltage, color='orange')
 
 ax2=ax.twinx()
@@ -45,8 +47,26 @@ try:
 	ax2.stem(eve.timestamp, eve.event, 'b', basefmt="g")
 except:
 	print()
+
 plt.savefig("{}/result.png".format(user_dir))
 plt.show()
+
+
+#-----------------auto-scaleplot-------------
+
+avgvoltage=gsr["voltage"].mean()
+ax=gsr.plot(x="timestamp", y="voltage", color='orange')
+#ax.set_ylim(avgvoltage-0.2, avgvoltage+0.2)
+#ax=plt.plot(gsr.timestamp, gsr.voltage, color='orange')
+
+ax2=ax.twinx()
+try:
+	ax2.stem(eve.timestamp, eve.event, 'b', basefmt="g")
+except:
+	print()
+plt.savefig("{}/result_autoscaled.png".format(user_dir))
+plt.show()
+
 
 
 #import os

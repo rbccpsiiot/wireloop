@@ -63,7 +63,7 @@ if __name__=='__main__':
 					send_touch()
 					time.sleep(.3)
 				except:
-					print()
+					print("Inside if")
 					try:
 						raise
 					except:
