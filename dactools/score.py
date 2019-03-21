@@ -46,7 +46,11 @@ noOfTouches=eve[eve.event==1].shape[0]
 # In[62]:
 
 
+<<<<<<< HEAD
 score=(timetaken+(noOfTouches)**2)*5
+=======
+score=timetaken+noOfTouches*5
+>>>>>>> b35ef519d57715bf805a13bb8285ce6778e43c58
 timetaken=str(datetime.timedelta(seconds=timetaken))
 
 
@@ -55,7 +59,11 @@ timetaken=str(datetime.timedelta(seconds=timetaken))
 
 print('Your score is:',score)
 print('You took', timetaken, 'to complete.')
+<<<<<<< HEAD
 print('Number of touches:', noOfTouches)
+=======
+
+>>>>>>> b35ef519d57715bf805a13bb8285ce6778e43c58
 
 # In[50]:
 
