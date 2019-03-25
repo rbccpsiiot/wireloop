@@ -1,0 +1,5 @@
+gauravtouches: 38
+  File "score.py", line 49
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax

@@ -81,6 +81,8 @@ echo ""
 python3 wireloopEvents.py
 
 
+python3 score.py 2>&1 | tee -a $uid
+
 if [ -z $NOCOUNTDOWN ]
 then
 	for i in {1..90}
@@ -101,7 +103,6 @@ echo "Saving data into CSVs"
 
 python3 makecsv.py
 rm data.dat
-python3 score.py 2>&1 | tee -a $uid
 
 echo "Removing dactool files from user folder...."
 rm *.py
